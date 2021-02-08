@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">UdemyCourse-age_in_minutes</string>
+    <string name="app_name">age in minutes</string>
     <string name="calculate">CALCULATE YOUR</string>
     <string name="age">AGE</string>
-    <string name="minute">IN_MINUTES</string>
-    <string name="select_date">SELECT_DATE</string>
+    <string name="minute">IN MINUTES</string>
+    <string name="select_date">SELECT DATE</string>
 </resources>

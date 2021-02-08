@@ -14,4 +14,5 @@
     <color name="ageTextBackGround">#C846DCE0</color>
     <color name="ageText">#FFF</color>
     <color name="selectText">#929292</color>
+    <color name="lightGrayText">#B7B7B7</color>
 </resources>
