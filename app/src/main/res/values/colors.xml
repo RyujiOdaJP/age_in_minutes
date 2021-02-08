@@ -11,4 +11,7 @@
     <color name="colorAccent">#D81B60</color>
     <color name="textColor">#844046</color>
     <color name="backGroundColor">#FEF1E0</color>
+    <color name="ageTextBackGround">#C846DCE0</color>
+    <color name="ageText">#FFF</color>
+    <color name="selectText">#929292</color>
 </resources>
