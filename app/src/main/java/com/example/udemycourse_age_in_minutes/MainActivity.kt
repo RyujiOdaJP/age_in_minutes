@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         val month = myCalendar.get(Calendar.MONTH)
         val day = myCalendar.get(Calendar.DAY_OF_MONTH)
 
-        DatePickerDialog(this,
+        val dpd = DatePickerDialog(this,
                 DatePickerDialog.OnDateSetListener { view, selectedYear, selectedMonth, selectedDayOfMonth ->
                     //after this arrow, code will be executed if all arguments set.
                     //view, year, month, dayOfMonth in here are results which are selected already in app.
@@ -51,6 +51,8 @@ class MainActivity : AppCompatActivity() {
                 },
                 year,
                 month,
-                day).show()
+                day)
+        dpd.datePicker.maxDate = Date().time - 86400000
+        dpd.show()
     }
 }
