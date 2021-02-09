@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
+import kotlin.time.minutes
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,10 +38,16 @@ class MainActivity : AppCompatActivity() {
                             Toast.LENGTH_LONG).show()
 
                     val selectedDate = "$selectedYear-${selectedMonth + 1}-$selectedDayOfMonth"
-                    tvSelectedDate.setText(selectedDate)
+                    tvSelectedDate.text = selectedDate
 
                     val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.JAPAN)
                     val theDate = sdf.parse(selectedDate)
+
+                    // divide by 60000 because it returns ms
+                    val selectedDateInMinutes = theDate.time / 60000
+                    val currentDate = sdf.parse(sdf.format(System.currentTimeMillis()))
+                    val currentDateInMinutes = currentDate.time / 60000
+                    ageInMinutes.text = (currentDateInMinutes - selectedDateInMinutes).toString()
                 },
                 year,
                 month,
